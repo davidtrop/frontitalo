@@ -1,0 +1,19 @@
+h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 0px;
+
+  position: absolute;
+  width: 520px;
+  height: 292px;
+  left: calc(50% - 520px/2);
+  top: calc(50% - 292px/2 - 46px);
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: bold;
+
+  color: #5C73DB;
+}

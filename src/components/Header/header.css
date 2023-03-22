@@ -1,0 +1,18 @@
+nav {
+  position: relative;
+  display: flex;
+  float: right;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.user {
+  margin-right: 20px;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(92.00000211596489, 115.00000074505806, 219.0000021457672, 1);
+
+  text-decoration: none;
+}

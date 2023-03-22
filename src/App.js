@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Router } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+
 import './App.css';
+import Ways from './routes';
+import history from './services/history';
+import 'react-toastify/dist/ReactToastify.css';
+import store, { persistor } from './store';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Router history={history}>
+          <Ways />
+          <ToastContainer autoClose={2000} />
+        </Router>
+      </PersistGate>
+    </Provider>
   );
 }
 
